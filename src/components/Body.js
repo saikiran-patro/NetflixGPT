@@ -1,12 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Login from './Login'
 import Browse from './Browse'
 import SignUp from './SignUp'
+import Home from './Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
 const Body = () => {
 
-  const router = createBrowserRouter([
+  
+  
 
+
+
+
+  const router = createBrowserRouter([
+    {
+      path:'/', 
+      element:<Home/>
+    },
     {
       path:'/login',
       element:<Login/>
