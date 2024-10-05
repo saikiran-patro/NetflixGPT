@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { API_OPTIONS, API_BASE_URL, LANG_OPTIONS, API_BASE_VIDEO_URL,LANG_VIDEO_OPTIONS} from '../constant';
+import { API_OPTIONS, API_BASE_URL, LANG_OPTIONS} from '../constant';
 import { addNowPlayingMovies,addPopularMovies, addTopRatedMovies , addUpComingMovies } from '../movieSlice';
 
 const useListMovies=()=>{
@@ -33,13 +33,13 @@ const useListMovies=()=>{
      
       catogories.map((category) =>{
             
-        getListMovies(category)
+        return getListMovies(category)
            
   
       })
   
   
-    },[])
+    },[dispatch])
 
 }
 

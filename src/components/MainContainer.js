@@ -5,8 +5,8 @@ import VideoTitle from './VideoTitle'
 import VideoBackground from './VideoBackground'
 const MainContainer = () => {
 
-    const nowPlayingMovies= useSelector(store=> store.movies?.nowPlayingMovies)
-    const mainMovie=nowPlayingMovies? (nowPlayingMovies[0]) :(null)
+    const popularMovies= useSelector(store=> store.movies?.popularMovies)
+    const mainMovie=popularMovies? (popularMovies[0]) :(null)
     if(mainMovie===null) return;
 
  
@@ -17,7 +17,7 @@ const MainContainer = () => {
     
     <div className=" relative">
         
-      <VideoTitle title={mainMovie.title} description={mainMovie.overview} />
+      <VideoTitle title={mainMovie.title} description={mainMovie.overview} movieId={mainMovie.id} />
       <VideoBackground movieId={mainMovie.id}/>    
         
       

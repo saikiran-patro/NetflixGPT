@@ -37,18 +37,17 @@ const Login = () => {
     toast.success('Login Successful!');
     navigate('/browse')
 
-    console.log(user)
+
     // ...
   })
   .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
+   
 
     toast.error('Incorrect Password')
   });
 
 
-    console.log("Form submitted with:", emailValue, passwordValue);
+   
     return true;
   };
 

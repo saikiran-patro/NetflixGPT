@@ -1,9 +1,5 @@
-import React, { useEffect, useState } from "react";
-import {
-  API_OPTIONS,
-  API_BASE_VIDEO_URL,
-  LANG_VIDEO_OPTIONS,
-} from "../utils/constant";
+import React from "react";
+
 import useMainTrailer from "../utils/hooks/useMainTrailer";
 
 const VideoBackground = ({ movieId }) => {
@@ -12,7 +8,7 @@ const VideoBackground = ({ movieId }) => {
     <div>
       <iframe
   className='w-screen h-[80vh] absolute -top-40 -z-10'
-  src={`https://www.youtube.com/embed/${movieVideo[0]?.key}?autoplay=1&mute=1&controls=0&showinfo=0&rel=0&playlist=${movieVideo[0]?.key}`}
+  src={`https://www.youtube.com/embed/${movieVideo[0]?.key}?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&playlist=${movieVideo[0]?.key}`}
   title="YouTube video player"
   allow="autoplay; encrypted-media"
   allowFullScreen

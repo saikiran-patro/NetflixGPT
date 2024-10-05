@@ -45,7 +45,7 @@ const Home = () => {
       <div className="bg-[#0d0d0e] flex ">
         <div className="w-[70%] my-[40px] relative mx-auto flex justify-center items-center p-[20px_0px] bg-[#0d0d0e] border-[5.5px] border-[#961E26] rounded-[25px] shadow-[0_0_67px_#961E26]">
             <div className="w-full text-center flex justify-center items-center">
-                <img className="w-full" src={require('../utils/images/NetflixHome.png')} />
+                <img className="w-full" src={require('../utils/images/NetflixHome.png')} alt="Netflix Home"/>
             </div>
             <div className="text-white flex flex-col absolute bg-transparent w-[563px] leading-[50px] font-bold text-center">
                  <h1 className="text-[3.5rem]">Unlimited movies,TV shows and more!</h1>
@@ -67,7 +67,7 @@ const Home = () => {
                  <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
             </div>
             <div className="flex justify-end ">
-                <img src={require('../utils/images/feature1.svg').default} />
+                <img src={require('../utils/images/feature1.svg').default} alt="Feature 1" />
             </div>
          </div>
 
@@ -77,7 +77,7 @@ const Home = () => {
                  <p>Save your favourites easily and always have something to watch.</p>
             </div>
             <div className="flex justify-end ">
-                <img src={require('../utils/images/feature2.svg').default} />
+                <img src={require('../utils/images/feature2.svg').default}  alt='Feature 2'/>
             </div>
          </div>
 
@@ -87,7 +87,7 @@ const Home = () => {
                  <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
             </div>
             <div className="flex justify-end ">
-                <img src={require('../utils/images/feature3.svg').default} />
+                <img src={require('../utils/images/feature3.svg').default} alt='Feature 3'/>
             </div>
          </div>
 
@@ -97,7 +97,7 @@ const Home = () => {
                  <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
             </div>
             <div className="flex justify-end ">
-                <img src={require('../utils/images/feature4.svg').default} />
+                <img src={require('../utils/images/feature4.svg').default} alt='Feature 4' />
             </div>
          </div>
       </div>

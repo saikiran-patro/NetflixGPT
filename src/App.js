@@ -2,7 +2,7 @@
  import { Provider } from 'react-redux';
  import appStore from './utils/appStore';
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
  function App() {
 
  

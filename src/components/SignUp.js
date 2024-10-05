@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const SignUp = () => {
   const navigate=useNavigate()
+  // eslint-disable-next-line
   const [errorMessage, setErrorMessage] = useState(null);
   const fullName = useRef(null);
   const email = useRef(null);
@@ -37,20 +38,22 @@ const SignUp = () => {
     .then((userCredential) => {
     // Signed up 
        const user = userCredential.user;
-       console.log(user);
+ 
 
        navigate('/browse')
     
        // ...
   })
   .catch((error) => {
+    // eslint-disable-next-line
     const errorCode = error.code;
+    // eslint-disable-next-line
     const errorMessage = error.message;
     toast.error("Already registered User");
     // ..
   });
 
-    console.log("Form submitted with:", fullNameValue, emailValue, passwordValue, rePasswordValue);
+
     return true;
   };
 

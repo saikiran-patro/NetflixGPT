@@ -1,11 +1,14 @@
-import React, { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import React from 'react';
+
 import 'react-toastify/dist/ReactToastify.css';
-import { useNavigate } from 'react-router-dom';
+
 import Header from './Header';
 import useListMovies from '../utils/hooks/useListMovies';
 import MainContainer from './MainContainer';
 import SecondaryContainer from './SecondaryContainer';
+import SuggestionsContainer from './SuggestionsContainer';
+import { useSelector } from 'react-redux';
+
 
 
 
@@ -16,7 +19,7 @@ const Browse = () => {
   useListMovies();
  
  
-  
+  const suggestedWindow=useSelector( store => store.suggestedMovie.showWindow)
 
 
   return (
@@ -24,7 +27,7 @@ const Browse = () => {
       <Header />
       <MainContainer />
       <SecondaryContainer />
-    
+      {suggestedWindow && <SuggestionsContainer /> }
     </div>
   );
 };
