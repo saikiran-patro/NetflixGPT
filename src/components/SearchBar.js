@@ -1,13 +1,13 @@
 import React, { useRef, useState } from 'react'
 import WordRotate from "./WordRotate";
-import { BorderBeam } from "./border-beam.jsx";
+import { BorderBeam } from "./BorderBeam.jsx";
 import { FaSearchengin } from "react-icons/fa";
 import { GEMINI_KEY } from '../utils/constant';
 import { SEARCH_API, API_OPTIONS } from '../utils/constant';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useDispatch } from 'react-redux';
-import { toggleWindow ,getRecommendedMovie , getRecommendedMovieNames} from '../utils/suggestedMoviesSlice'
+import { toggleWindow ,getRecommendedMovie , getRecommendedMovieNames, toggleShimmer} from '../utils/suggestedMoviesSlice'
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const SearchBar = () => {
@@ -21,12 +21,14 @@ const SearchBar = () => {
 function hidePlaceHolder() {
     if (placeHolderTextRef.current) {
       placeHolderTextRef.current.style.display = "none";
+      inputRef.current.setAttribute("placeholder","Ask GPT")
     }
   }
 
   // Function to show the placeholder text when input is blurred (out of focus)
   function showPlaceHolder() {
     if (inputRef.current && inputRef.current.value === "") { // Show only if input is empty
+      inputRef.current.setAttribute("placeholder","")
       if (placeHolderTextRef.current) {
         placeHolderTextRef.current.style.display = "flex"; // Restore display
       }
@@ -35,8 +37,9 @@ function hidePlaceHolder() {
   async function searchMovie() {
 
     // dispatch an action to show the recommended movie window;
-
+    
     dispatch(toggleWindow())
+   
 
 
     const genAI = new GoogleGenerativeAI(GEMINI_KEY);
@@ -77,6 +80,7 @@ function hidePlaceHolder() {
         const validMovies = listMovies.filter(movie => movie !== null );
         console.log(validMovies)
         dispatch(getRecommendedMovie(validMovies))
+        dispatch(toggleShimmer())
     }
     else{
 

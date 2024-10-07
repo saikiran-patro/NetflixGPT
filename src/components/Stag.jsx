@@ -23,8 +23,8 @@ const StaggerAnimation = () => {
        
      <div className=" suggestionsContainer  p-4 bg-transparent rounded-lg w-[80%] h-[80vh] overflow-y-scroll   top-52">
       {
-        movieList && movieList.map((movieItem,i)=>{
-           return <MovieList key={movieItem} title={movieItem} data={recommendedMovieList[i]} ></MovieList>
+        movieList && movieList.map((movieItem,index)=>{
+           return recommendedMovieList[index] &&  <MovieList key={movieItem} title={movieItem} data={recommendedMovieList[index]} ></MovieList>
         })
       }
       </div>

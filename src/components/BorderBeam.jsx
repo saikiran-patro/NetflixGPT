@@ -2,11 +2,11 @@ import { cn } from "../lib/util";
 
 export const BorderBeam = ({
   className,
-  size = 200,
+  size = 400,
   duration = 6,
-  anchor = 90,
-  borderWidth = 2,
-  colorFrom = "#FF9D76",
+  anchor = 10,
+  borderWidth = 3,
+  colorFrom = "white",
   colorTo = "#FF0000",
   delay = 0
 }) => {

@@ -74,7 +74,7 @@ const SignUp = () => {
                   <input
                     id="name"
                     ref={fullName}
-                    className="bg-inherit w-full border-none outline-none leading-[1.5]"
+                    className="bg-inherit w-full border-none outline-none text-white leading-[1.5]"
                     type="text"
                     name="name"
                     autoComplete="off"  // Disable autocomplete
@@ -87,7 +87,7 @@ const SignUp = () => {
                   <input
                     id="email"
                     ref={email}
-                    className="bg-inherit w-full border-none outline-none leading-[1.5]"
+                    className="bg-inherit w-full border-none outline-none text-white leading-[1.5]"
                     type="email"
                     name="email"
                     autoComplete="off"  // Disable autocomplete
@@ -100,7 +100,7 @@ const SignUp = () => {
                   <input
                     id="password"
                     ref={password}
-                    className="bg-inherit w-full border-none outline-none leading-[1.5]"
+                    className="bg-inherit w-full border-none outline-none text-white leading-[1.5]"
                     type="password"
                     name="password"
                     autoComplete="off"  // Disable autocomplete
@@ -113,7 +113,7 @@ const SignUp = () => {
                   <input
                     id="re-password"
                     ref={rePassword}
-                    className="bg-inherit w-full border-none outline-none leading-[1.5]"
+                    className="bg-inherit w-full border-none outline-none text-white leading-[1.5]"
                     type="password"
                     name="re-password"
                     autoComplete="off"  // Disable autocomplete

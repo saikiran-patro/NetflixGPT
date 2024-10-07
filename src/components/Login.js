@@ -65,13 +65,13 @@ const Login = () => {
               <div className="border-black transition ease-[.5s] bg-[#131313] px-5 mt-5 py-4 rounded-md">
                 <label>Email Address</label>
                 <div>
-                  <input ref={email} className="bg-inherit w-full border-none outline-none leading-[1.5]" autoComplete="off" type="email" name="email" />
+                  <input ref={email} className="bg-inherit w-full border-none outline-none text-white leading-[1.5]" autoComplete="off" type="email" name="email" />
                 </div>
               </div>
               <div className="border-black transition ease-[.5s] bg-[#131313] px-5 mt-5 py-4 rounded-md">
                 <label>Password</label>
                 <div>
-                  <input ref={password} className="bg-inherit w-full border-none outline-none leading-[1.5]" type="password" name="password" />
+                  <input ref={password} className="bg-inherit w-full border-none outline-none text-white leading-[1.5]" type="password" name="password" />
                 </div>
               </div>
               <button className="btn bg-red-700 rounded-md text-center w-full my-5 p-4 text-[1.2rem]" type="submit">Sign In</button>
