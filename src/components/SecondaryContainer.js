@@ -13,7 +13,7 @@ const SecondaryContainer = () => {
     }
     const isOpenRecommended= useSelector((store) => store.suggestedMovie.showWindow)
   return (
-    <div className={ isOpenRecommended ? "bg-black overflow-hidden" :"bg-black"}>
+    <div className={ isOpenRecommended ? "bg-black overflow-hidden" :"bg-black max-md:pt-[20%]"}>
          { movies && movieCategory.map((category)=> <MovieList key={category} title={category} data={movies[movieMapper[category]]} ></MovieList>) }
 
          

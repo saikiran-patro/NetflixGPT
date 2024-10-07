@@ -7,6 +7,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import { signOut } from 'firebase/auth';
 import SearchBar from './SearchBar';
+import { Sling as Hamburger } from 'hamburger-react'
 
 
 const Header = () => {
@@ -15,7 +16,7 @@ const Header = () => {
   const [isSignIn, setIsSignIn] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
-  
+  const [isOpen, setOpen] = useState(false)
 
   // eslint-disable-next-line
   const path = location.pathname.split('/')[1];
@@ -62,13 +63,17 @@ const Header = () => {
   }, [dispatch]);
 
   return (
-    <header style={{background: "linear-gradient(to right, black , transparent)"}} className='max-w-[100%] px-[3rem] py-[1.5rem] m-auto relative flex items-center'>
-      <div className='z-[2] box-border inherit h-auto'>
-        <img src={require('../utils/images/logo.svg').default} className="w-[130px]" alt="Logo" />
+    <header style={{background: "linear-gradient(to right, black , transparent)"}} className='max-w-[100%] px-[3rem] py-[1.5rem] m-auto relative flex items-center max-md:p-5'>
+      
+      <div className="hidden max-lg:flex justify-center items-center px-2">
+      <Hamburger  duration={0.6} color="white" size={32}  easing="ease-in" toggled={isOpen} toggle={setOpen} direction="right" />
+      </div>
+      <div className='z-[2] box-border inherit h-auto max-lg:mx-auto max-lg:my-0 max-lg:pr-[10%]'>
+        <img src={require('../utils/images/logo.svg').default} className="w-[130px] max-md:w-[70%]" alt="Logo" />
       </div>
 
       {isSignIn ? (
-        <div className='flex justify-between w-full'>
+        <div className='flex justify-between w-full max-lg:hidden'>
           <div className='flex w-1/2 ml-10 items-center'>
             <ol className='flex w-full text-white text-lg gap-[9%]'>
               <li>Home</li>

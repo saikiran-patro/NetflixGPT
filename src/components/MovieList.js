@@ -2,7 +2,7 @@ import React from 'react'
 import MovieCard from './MovieCard'
 
 const MovieList = ({title,data}) => {
-  console.log("SaiKi")
+ 
   return (
     <div >
         <div className="p-[30px]">

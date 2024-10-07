@@ -202,3 +202,10 @@ input {
 
   font-family: Arial, Helvetica, sans-serif !important;
 }
+
+@media (max-width: 768px) {
+  
+  .videoTitle{
+    height: calc(-16rem + 65vh) !important;
+  }
+}
