@@ -43,25 +43,25 @@ const Home = () => {
      <div className='bg-[#0D0D0E]'>
         <Header/>
       <div className="bg-[#0d0d0e] flex ">
-        <div className="w-[70%] my-[40px] relative mx-auto flex justify-center items-center p-[20px_0px] bg-[#0d0d0e] border-[5.5px] border-[#961E26] rounded-[25px] shadow-[0_0_67px_#961E26]">
+        <div className="w-[70%] my-[40px] relative mx-auto flex justify-center items-center p-[20px_0px] bg-[#0d0d0e] border-[5.5px] border-[#961E26] rounded-[25px] shadow-[0_0_67px_#961E26] max-lg:mt-[120px] max-lg:w-[95%]">
             <div className="w-full text-center flex justify-center items-center">
                 <img className="w-full" src={require('../utils/images/NetflixHome.png')} alt="Netflix Home"/>
             </div>
-            <div className="text-white flex flex-col absolute bg-transparent w-[563px] leading-[50px] font-bold text-center">
-                 <h1 className="text-[3.5rem]">Unlimited movies,TV shows and more!</h1>
+            <div className="homeInfo text-white flex flex-col absolute bg-transparent w-[563px] leading-[50px] font-bold text-center max-lg:w-[100% max-lg:text-[10px]]">
+                 <h1 className=" tagLine text-[2.5rem]">Unlimited movies,TV shows and more!</h1>
                 <p>Starts at ₹149. Cancel anytime.</p>
                 <p>Ready to watch? Just Signup or Signin to see awesome content.</p>
-                <Link to="/login"><button className="mx-auto flex justify-center items-center gap-[10px] bg-[#cd0613] px-[15px] rounded-[5px] text-[1.2rem] max-w-fit">Get Started <div className="pt-1"><FaChevronRight className='text-[15px]' /></div></button></Link>
+                <Link to="/login"><button className=" getStarted mx-auto flex justify-center items-center gap-[10px] bg-[#cd0613] px-[15px] rounded-[5px] text-[1.2rem] max-w-fit">Get Started <div className="pt-0"><FaChevronRight className='text-[15px]' /></div></button></Link>
             </div>
         </div>
       </div>
 
-      <div className="flex justify-center items-center text-white font-bold text-2xl my-12">
+      <div className="flex justify-center items-center text-white font-bold text-2xl my-12 max-md:text-[16px] max-md:text-center max-md:p-3">
         <p>Seamless Streaming Anytime, Anywhere with the below features</p>
       </div>
 
       <div className="flex justify-center items-center gap-8 max-w-[1200px] mx-auto flex-wrap">
-         <div className="flex flex-col gap-5 w-[250px] h-[330px] max-h-[330px] justify-between bg-gradient-to-r from-[#192247] to-[#210e17] p-5 rounded-[10px] mb-7 mt-15 max-lg:flex-[0_0_calc(45%-0.50rem)] max-lg:h-[250px]">
+         <div className="featureCard flex flex-col gap-5 w-[250px] h-[330px] max-h-[330px] justify-between bg-gradient-to-r from-[#192247] to-[#210e17] p-5 rounded-[10px] mb-7 mt-15 max-lg:flex-[0_0_calc(45%-0.50rem)] max-lg:h-[250px] ">
             <div className="text-white">
                  <h2 className="font-bold text-[1.5rem] mb-3">Enjoy on your TV</h2>
                  <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
@@ -71,7 +71,7 @@ const Home = () => {
             </div>
          </div>
 
-         <div className="flex flex-col gap-5 w-[250px] h-[330px] max-h-[330px] justify-between bg-gradient-to-r from-[#192247] to-[#210e17] p-5 rounded-[10px] mb-7 mt-15 max-lg:flex-[0_0_calc(45%-0.50rem)] max-lg:h-[250px]">
+         <div className="featureCard flex flex-col gap-5 w-[250px] h-[330px] max-h-[330px] justify-between bg-gradient-to-r from-[#192247] to-[#210e17] p-5 rounded-[10px] mb-7 mt-15 max-lg:flex-[0_0_calc(45%-0.50rem)] max-lg:h-[250px]">
             <div className="text-white">
                  <h2 className="font-bold text-[1.5rem] mb-3">Download your shows to watch offline</h2>
                  <p>Save your favourites easily and always have something to watch.</p>
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
          </div>
 
-         <div className="flex flex-col gap-5 w-[250px] h-[330px] max-h-[330px] justify-between bg-gradient-to-r from-[#192247] to-[#210e17] p-5 rounded-[10px] mb-7 mt-15 max-lg:flex-[0_0_calc(45%-0.50rem)] max-lg:h-[250px]">
+         <div className=" featureCard flex flex-col gap-5 w-[250px] h-[330px] max-h-[330px] justify-between bg-gradient-to-r from-[#192247] to-[#210e17] p-5 rounded-[10px] mb-7 mt-15 max-lg:flex-[0_0_calc(45%-0.50rem)] max-lg:h-[250px]">
             <div className="text-white">
                  <h2 className="font-bold text-[1.5rem] mb-3">Watch everywhere</h2>
                  <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
@@ -91,7 +91,7 @@ const Home = () => {
             </div>
          </div>
 
-         <div className="flex flex-col gap-5 w-[250px] h-[330px] max-h-[330px] justify-between bg-gradient-to-r from-[#192247] to-[#210e17] p-5 rounded-[10px] mb-7 mt-15 max-lg:flex-[0_0_calc(45%-0.50rem)] max-lg:h-[250px]">
+         <div className="featureCard flex flex-col gap-5 w-[250px] h-[330px] max-h-[330px] justify-between bg-gradient-to-r from-[#192247] to-[#210e17] p-5 rounded-[10px] mb-7 mt-15 max-lg:flex-[0_0_calc(45%-0.50rem)] max-lg:h-[250px]">
             <div className="text-white">
                  <h2 className="font-bold text-[1.5rem] mb-3">Create profiles for kids</h2>
                  <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>

@@ -10,7 +10,9 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const navigate=useNavigate()
+  // eslint-disable-next-line 
   const [errorMessage, setErrorMessage] = useState(null);
+
   const email = useRef(null);
   const password = useRef(null);
 
@@ -33,6 +35,7 @@ const Login = () => {
     signInWithEmailAndPassword(auth, emailValue, passwordValue)
   .then((userCredential) => {
     // Signed in 
+    // eslint-disable-next-line 
     const user = userCredential.user;
     toast.success('Login Successful!');
     navigate('/browse')

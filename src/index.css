@@ -208,4 +208,38 @@ input {
   .videoTitle{
     height: calc(-16rem + 65vh) !important;
   }
+  .bg-black-important {
+    background-color: black !important;
+  }
+  .homeInfo{
+    font-size:16px !important;
+    width: 100% !important;
+
+  }
+  .tagLine{
+
+
+    font-size:20px !important;
+  }
+}
+
+@media (max-width:680px) {
+  .tagLine{
+    font-size: 15px  !important
+  }
+  .homeInfo{
+    font-size: 9px !important;
+    line-height: 25px !important;
+  }
+  .getStarted{
+    transform:scale(0.7)  ;
+    padding:12px 15px  !important;
+    font-size: 12px !important;
+  }
+  .featureCard{
+    flex-basis: 90vw !important;
+  }
+}
+body{
+  background-color:#0d0d0e !important;
 }

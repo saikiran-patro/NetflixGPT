@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useDispatch } from 'react-redux';
 import { auth } from '../utils/firebase';
 import { onAuthStateChanged } from "firebase/auth";
@@ -8,6 +8,8 @@ import { ToastContainer, toast } from 'react-toastify';
 import { signOut } from 'firebase/auth';
 import SearchBar from './SearchBar';
 import { Sling as Hamburger } from 'hamburger-react'
+import Menu from './Menu';
+import { AnimatePresence } from 'framer-motion';
 
 
 const Header = () => {
@@ -60,15 +62,18 @@ const Header = () => {
     });
 
     return () => unsubscribe();
+  // eslint-disable-next-line 
   }, [dispatch]);
 
   return (
-    <header style={{background: "linear-gradient(to right, black , transparent)"}} className='max-w-[100%] px-[3rem] py-[1.5rem] m-auto relative flex items-center max-md:p-5'>
-      
-      <div className="hidden max-lg:flex justify-center items-center px-2">
-      <Hamburger  duration={0.6} color="white" size={32}  easing="ease-in" toggled={isOpen} toggle={setOpen} direction="right" />
-      </div>
-      <div className='z-[2] box-border inherit h-auto max-lg:mx-auto max-lg:my-0 max-lg:pr-[10%]'>
+    <header style={isSignIn? {background: "linear-gradient(to right, black , transparent)"}: {background:"transparent"}} className='bg-black-important max-w-[100%] px-[3rem] py-[1.5rem] m-auto relative flex items-center max-md:p-5 max-lg:fixed max-lg:z-20  max-lg:w-full max-lg:pl-0 '>
+      { isSignIn ? (
+         <div className="hidden max-lg:flex justify-center items-center px-2">
+         <Hamburger  duration={0.6} color="white" size={32}  easing="ease-in" toggled={isOpen} toggle={setOpen} direction="right" />
+         </div>
+      ):(null)}
+     
+      <div className='z-[2] box-border inherit h-auto max-lg:mx-auto max-lg:my-0 max-lg:flex max-lg:justify-center max-lg:items-center'>
         <img src={require('../utils/images/logo.svg').default} className="w-[130px] max-md:w-[70%]" alt="Logo" />
       </div>
 
@@ -102,6 +107,11 @@ const Header = () => {
         pauseOnHover
         theme="light"
       />
+      <AnimatePresence>
+     { isOpen && isSignIn ? ( <Menu callSignOut={handleSignout}/>) :(null)
+
+    }
+    </AnimatePresence>     
     </header>
   );
 }

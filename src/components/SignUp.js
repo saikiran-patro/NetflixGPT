@@ -19,7 +19,7 @@ const SignUp = () => {
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
-
+    // eslint-disable-next-line 
     const fullNameValue = fullName.current.value;
     const emailValue = email.current.value;
     const passwordValue = password.current.value;
@@ -37,6 +37,7 @@ const SignUp = () => {
     createUserWithEmailAndPassword(auth, emailValue, passwordValue)
     .then((userCredential) => {
     // Signed up 
+    // eslint-disable-next-line 
        const user = userCredential.user;
  
 

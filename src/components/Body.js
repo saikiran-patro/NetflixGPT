@@ -4,7 +4,7 @@ import Browse from './Browse'
 import SignUp from './SignUp'
 import Home from './Home'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
+import  Footer  from './Footer'
 const Body = () => {
 
   
@@ -35,6 +35,7 @@ const Body = () => {
     <>
     
     <RouterProvider  router={router} />
+    <Footer />
     </>
   )
 }

@@ -1,4 +1,4 @@
-import OpenAI from "openai";
+
 export const API_OPTIONS = {
     method: 'GET',
     headers: {

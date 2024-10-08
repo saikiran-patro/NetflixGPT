@@ -73,12 +73,12 @@ function hidePlaceHolder() {
         });
 
         // Wait for all movie fetches to complete
-        console.log("-----------Movie-------------");
+  
         const listMovies = await Promise.all(movieObjects);
         
         // Filter out any null results
         const validMovies = listMovies.filter(movie => movie !== null );
-        console.log(validMovies)
+  
         dispatch(getRecommendedMovie(validMovies))
         dispatch(toggleShimmer())
     }
