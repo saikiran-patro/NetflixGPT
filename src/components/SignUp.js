@@ -65,7 +65,7 @@ const SignUp = () => {
         <Header />
 
         <div className="absolute inset-0 bg-black opacity-50"></div> {/* Black tint effect on the page */}
-        <div className="flex justify-center items-center h-[80vh] relative">
+        <div className="flex justify-center items-center h-[100vh] relative">
           <div className='max-w-[450px] text-white bg-[#000000b3] w-[450px] absolute z-10 p-[48px_68px] rounded-md'>
             <h3 className="text-[2rem]">Sign Up</h3>
             <form onSubmit={handleFormSubmit}>
